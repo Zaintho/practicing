@@ -1,0 +1,105 @@
+/*Properties */
+:root {
+  --background-image-1: #9cfcf8;
+  --background-image-2: #6e7bfb;
+  --max-width: 50vw;
+  --max-height: 50vh;
+  --size-3em: 3em;
+  --size-4em: 4em;
+}
+
+/* RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Archivo", sans-serif;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+body {
+  box-sizing: inherit;
+  width: 100vw;
+  min-height: 100vh;
+}
+/* UTILITIES */
+.bor-rad-25px {
+  border-radius: 25px;
+}
+.font-3em {
+  font-size: var(--size-3em);
+}
+.font-4em {
+  font-size: var(--size-4em);
+}
+.pad-3em-all {
+  padding: 2em;
+}
+.text-thin-italic {
+  font-weight: 100;
+  font-style: italic;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Styles Site */
+body {
+  background-image: radial-gradient(
+    circle farthest-corner at 12.3% 19.3%,
+    var(--background-image-1) 0%,
+    var(--background-image-2) 100.2%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-container-buttons > button {
+  padding: 0.5em;
+  font-size: 1.2em;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+  border: thin solid black;
+  transition: background-color 0.1s ease-in-out;
+}
+.div-container-buttons button:not(:first-child) {
+  margin-left: 1em;
+}
+.div-container-buttons button:hover {
+  background-color: aliceblue;
+}
+.div-container-buttons button:active {
+  background-color: black;
+  border: thin solid white;
+  color: white;
+}
+
+.div-counterApp-container {
+  width: var(--max-width);
+  height: var(--max-height);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: thin solid black;
+}
+.div-countApp-div-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 80%;
+}
+button:disabled {
+  background-color: rgb(199, 197, 197);
+  color: rgb(100, 99, 99);
+}
