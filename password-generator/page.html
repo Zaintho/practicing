@@ -1,0 +1,312 @@
+<!-- <article class="pass-gen-container">
+    <h1 class="txt-center h1-title">Password Generator</h1>
+    <div class="input-container">
+      <div class="input-text">
+        <input type="text" placeholder="Generar contraseña">
+        <img src="./assets/icon-copy.svg" alt=" icon copy" class="img-input" />
+        <div class="div-strong-security"></div>
+      </div>
+    </div>
+    <div class="div-pass-long-container">
+      <p>Password length</p>
+      <span>13</span>
+      <input type="range" min="0" max="100" value="59" />
+    </div>
+    <div class="div-checkbox-container">
+      <p>Password Settings</p>
+      <div><input type="checkbox" name="lower-case" id="lower-case">
+        <label for="lower-case">Lowercase (a-z)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="upper-case" id="upper-case">
+        <label for="upper-case">Uppercase (A-Z)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="numbers" id="numbers">
+        <label for="numbers">Numbers (0-9)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="simbols" id="simbols">
+        <label for="simbols">Symbols (!-$^+)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="exclude" id="exclude">
+        <label for="exclude">Exclude Duplicate</label>
+      </div>
+      <div>
+        <input type="checkbox" name="include" id="include">
+        <label for="include">Include Spaces</label>
+      </div>
+    </div>
+    <div class="div-button-generate">
+      <p>GENERATE PASSWORD</p>
+    </div>
+  </article>
+  /* ********** Custom Properties ********** */
+  :root {
+  --font-family: "Archivo", sans-serif;
+  --font-size: 16px;
+  }
+  /* ********** Reset ********** */
+  html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  }
+  *,
+  *::after,
+  *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  font,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  }
+  body {
+  line-height: 1;
+  width: 100vw;
+  min-height: 100vh;
+  }
+  ol,
+  ul {
+  list-style: none;
+  }
+  blockquote,
+  q {
+  quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+  content: "";
+  content: none;
+  }
+  
+  /* remember to define focus styles! */
+  :focus {
+  outline: 0;
+  }
+  
+  /* remember to highlight inserts somehow! */
+  ins {
+  text-decoration: none;
+  }
+  del {
+  text-decoration: line-through;
+  }
+  
+  /* tables still need 'cellspacing="0"' in the markup */
+  table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+  /* ********** Components ********** */
+  /* ********** Utilities ********** */
+  /* ********** Site Styles ********** */
+  .bg-gradient {
+  background-image: linear-gradient(220.55deg, #7cf7ff 0%, #4b73ff 100%);
+  }
+  .display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .h1-title {
+  padding-bottom: 0.5em;
+  
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 100;
+  
+  border-bottom: 1px solid rgb(185, 182, 182);
+  }
+  .pass-gen-container {
+  width: 30%;
+  height: 50vh;
+  padding: 1em;
+  
+  background-color: aliceblue;
+  
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px 1px rgb(85, 84, 84);
+  }
+  .txt-center {
+  text-align: center;
+  }
+  /* input container */
+  .input-text {
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .input-text > input {
+  margin-top: 15px;
+  
+  width: 100%;
+  height: 35px;
+  padding: 1em;
+  
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  font-weight: 100;
+  
+  background-color: transparent;
+  border-radius: 5px;
+  }
+  .img-input {
+  position: absolute;
+  right: 10px;
+  top: 2em;
+  
+  width: 20px;
+  height: auto;
+  
+  color: #7cf7ff;
+  
+  cursor: pointer;
+  }
+  
+  .div-strong-security {
+  margin-top: 1em;
+  height: 4px;
+  width: 100%;
+  background-color: grey;
+  border-radius: 1px;
+  }
+  .low-security {
+  background-image: linear-gradient(45deg, rgb(255, 0, 0) 25%, gray 26%);
+  }
+  .medium-security {
+  background-image: linear-gradient(45deg, rgb(225, 228, 31) 50%, gray 51%);
+  }
+  .strong-security {
+  background-color: rgb(26, 250, 26);
+  }
+  .div-pass-long-container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  }
+  .div-pass-long-container > p {
+  font-weight: 900;
+  font-style: italic;
+  display: inline-block;
+  width: 90%;
+  }
+  .div-pass-long-container > input {
+  margin-top: 1em;
+  width: 100%;
+  }
+  .div-checkbox-container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .div-checkbox-container > p {
+  width: 100%;
+  margin: 1em auto;
+  }
+  .div-checkbox-container div {
+  width: 50%;
+  font-size: 1.3em;
+  }
+  .div-checkbox-container input {
+  margin-right: 0.5em;
+  font-size: 2em;
+  }
+  .div-button-generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 85%;
+  height: 3em;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  
+  color: white;
+  
+  background-color: #4b73ff;
+  border-radius: 15px;
+  cursor: pointer;
+  }
+  .div-button-generate:hover {
+  background-color: #a2b6ff;
+  color: black;
+  }
+
+ -->

@@ -15,8 +15,61 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
-
+<body class="bg-gradient display-flex">
+  <article class="container">
+    <h1>Password Generator</h1>
+    <section class="wrapper">
+      <div class="input-box">
+        <input type="text" name="password_txt" id="password_txt"
+          value="5jkSVY*D*)^AR6!Wt^mvPNK^nJ3!LB4LKetNrXxBDPT%Vftkv7X8ps!QdT^6rNsW" disabled />
+        <p class="msg-copied">Copied!</p>
+        <span>
+          <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              d="M5 22q-.825 0-1.413-.587Q3 20.825 3 20h2Zm-2-3.5v-2h2v2ZM3 15v-2h2v2Zm0-3.5v-2h2v2ZM3 8q0-.825.587-1.412Q4.175 6 5 6v2Zm3.5 14v-2h2v2ZM9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm1 6v-2h2v2Zm3.5 0v-2h2q0 .825-.587 1.413Q14.325 22 13.5 22Z" />
+          </svg>
+        </span>
+      </div>
+      <div class="pass-indicator"></div>
+      <div class="pass-length">
+        <div class="details">
+          <label>Password Length</label>
+          <span></span>
+        </div>
+        <input type="range" name="length_rng" id="length_rng" step="1" min="1" max="30" value="15">
+      </div>
+      <div class="pass-settings">
+        <ul class="options">
+          <li class="option">
+            <input type="checkbox" name="lowercase_chbx" id="lowercase_chbx" checked>
+            <label for="lowercase_chbx">Lowercase (a-z)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="uppercase_chbx" id="uppercase_chbx">
+            <label for="uppercase_chbx">Uppercase (a-z)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="numbers_chbx" id="numbers_chbx">
+            <label for="numbers_chbx">Numbers (0-9)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="symbols_chbx" id="symbols_chbx">
+            <label for="symbols_chbx">Symbols (!-$^+)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="exc-duplicate" id="exc-duplicate">
+            <label for="exc-duplicate">Exclude duplicate</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="spaces" id="spaces">
+            <label for="spaces">Include Spaces</label>
+          </li>
+        </ul>
+        <button class="generate-btn">Generate Password</button>
+      </div>
+    </section>
+  </article>
+  <script src="./index.js" type="module"></script>
 </body>
 
 </html>

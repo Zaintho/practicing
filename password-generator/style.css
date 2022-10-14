@@ -1,128 +1,167 @@
-/* ********** Custom Properties ********** */
 :root {
   --font-family: "Archivo", sans-serif;
   --font-size: 16px;
+
+  --step--2: clamp(0.87rem, calc(0.83rem + 0.17vw), 0.96rem);
+  --step--1: clamp(1.04rem, calc(0.98rem + 0.29vw), 1.2rem);
+  --step-0: clamp(1.25rem, calc(1.16rem + 0.45vw), 1.5rem);
+  --step-1: clamp(1.5rem, calc(1.36rem + 0.68vw), 1.88rem);
+  --step-2: clamp(1.8rem, calc(1.6rem + 0.99vw), 2.34rem);
+  --step-3: clamp(2.16rem, calc(1.88rem + 1.4vw), 2.93rem);
+  --step-4: clamp(2.59rem, calc(2.2rem + 1.95vw), 3.66rem);
+  --step-5: clamp(3.11rem, calc(2.58rem + 2.67vw), 4.58rem);
+  --principal-color: black;
+  --border-color: #d5d5d5;
 }
-/* ********** Reset ********** */
+
+/* Reset */
 html {
-  font-size: var(--font-size);
   font-family: var(--font-family);
+  font-size: var(--font-size);
   box-sizing: border-box;
 }
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
   box-sizing: inherit;
-}
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+  margin: 0;
 }
-body {
-  line-height: 1;
-}
-ol,
 ul {
-  list-style: none;
+  list-style-type: none;
 }
-blockquote,
-q {
-  quotes: none;
+/* Components */
+/* Utilities */
+/* Site Style */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(220.55deg, #8a88fb 0%, #d079ee 100%);
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+.container {
+  width: 500px;
+  border-radius: 20px;
+  background-color: white;
+  font-size: var(--step--1);
+}
+.container h1 {
+  padding: 1em 1.175em;
+  font-weight: 400;
+  font-size: var(--step-1);
+  border-bottom: thin solid var(--border-color);
+}
+.wrapper {
+  margin: 1.25em 1.75em;
+}
+.input-box {
+  position: relative;
+}
+.input-box input {
+  width: 100%;
+  height: 7vh;
+  padding: 0 2.85em 0 1em;
+  color: var(--principal-color);
+  font-size: var(--step---2);
+  font-weight: 100;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.msg-copied {
+  text-align: right;
+  margin: 0.5em 1.5em 0.5em 0;
+  color: green;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+.input-box span {
+  position: absolute;
+  right: 5px;
+  top: 18px;
+}
+.copy-icon {
+  fill: #777676;
+}
+.copy-icon:hover {
+  cursor: pointer;
+  fill: darkorange;
+}
+.msg-copied.active {
+  height: auto;
+  display: block;
+}
+.pass-indicator {
+  position: relative;
+  width: 100%;
+  height: 0.4vh;
+  margin-top: 0.75em;
+  border-radius: 25px;
+  background-color: var(--border-color);
+}
+.pass-indicator::before {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  background-color: #f4f402;
   content: "";
-  content: none;
 }
-
-/* remember to define focus styles! */
-:focus {
-  outline: 0;
+.pass-length {
+  margin: 1.56em 0 1.25em;
 }
-
-/* remember to highlight inserts somehow! */
-ins {
-  text-decoration: none;
+.details {
+  display: flex;
+  justify-content: space-between;
 }
-del {
-  text-decoration: line-through;
+.pass-length input {
+  width: 100%;
+  height: 0.6vh;
 }
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
 }
-/* ********** Components ********** */
-/* ********** Utilities ********** */
-/* ********** Site Styles ********** */
+.option {
+  width: calc(100% / 2);
+  margin-bottom: 1em;
+}
+.option:first-child {
+  pointer-events: none;
+}
+.option:first-child input {
+  opacity: 0.5;
+}
+.option input {
+  height: 1em;
+  width: 1em;
+  cursor: pointer;
+}
+.option label {
+  cursor: pointer;
+  padding-left: 0.5em;
+}
+.generate-btn {
+  width: 100%;
+  height: 4em;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: var(--step---2);
+  color: white;
+  border: none;
+  background-color: #8684ff;
+  cursor: pointer;
+}
+.generate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 4px #888888;
+}
+.generate-btn:active {
+  transform: scale(1);
+  background-color: #4946ff;
+  box-shadow: 4px 4px 4px transparent;
+}
