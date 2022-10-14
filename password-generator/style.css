@@ -66,6 +66,7 @@ body {
   color: var(--principal-color);
   font-size: var(--step---2);
   font-weight: 100;
+  letter-spacing: 1.5px;
   background-color: transparent;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -105,11 +106,24 @@ body {
 .pass-indicator::before {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 0%;
   border-radius: inherit;
-  background-color: #f4f402;
   content: "";
+  transition: width 1s ease-in-out;
 }
+.pass-indicator#weak::before {
+  width: 25%;
+  background-color: orangered;
+}
+.pass-indicator#medium::before {
+  width: 50%;
+  background-color: #f4f402;
+}
+.pass-indicator#strong::before {
+  width: 100%;
+  background-color: green;
+}
+
 .pass-length {
   margin: 1.56em 0 1.25em;
 }

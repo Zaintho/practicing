@@ -20,8 +20,7 @@
     <h1>Password Generator</h1>
     <section class="wrapper">
       <div class="input-box">
-        <input type="text" name="password_txt" id="password_txt"
-          value="5jkSVY*D*)^AR6!Wt^mvPNK^nJ3!LB4LKetNrXxBDPT%Vftkv7X8ps!QdT^6rNsW" disabled />
+        <input type="text" name="password_txt" id="password_txt" placeholder="Click to generate a password" disabled />
         <p class="msg-copied">Copied!</p>
         <span>
           <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
@@ -41,23 +40,23 @@
       <div class="pass-settings">
         <ul class="options">
           <li class="option">
-            <input type="checkbox" name="lowercase_chbx" id="lowercase_chbx" checked>
+            <input type="checkbox" name="lowercase" id="lowercase_chbx" checked>
             <label for="lowercase_chbx">Lowercase (a-z)</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="uppercase_chbx" id="uppercase_chbx">
+            <input type="checkbox" name="uppercase" id="uppercase_chbx">
             <label for="uppercase_chbx">Uppercase (a-z)</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="numbers_chbx" id="numbers_chbx">
+            <input type="checkbox" name="numbers" id="numbers_chbx">
             <label for="numbers_chbx">Numbers (0-9)</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="symbols_chbx" id="symbols_chbx">
+            <input type="checkbox" name="symbols" id="symbols_chbx">
             <label for="symbols_chbx">Symbols (!-$^+)</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="exc-duplicate" id="exc-duplicate">
+            <input type="checkbox" name="duplicate" id="exc-duplicate">
             <label for="exc-duplicate">Exclude duplicate</label>
           </li>
           <li class="option">
