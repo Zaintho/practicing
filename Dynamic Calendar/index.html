@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Calendar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <Article class="wrapper">
+    <div class="month-year">
+      <h2></h2>
+      <nav class="arrows">
+        <svg class="prev" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+          <path d="M23.375 30 13.333 19.958l10.042-10 1.958 1.959-8.041 8.041 8.041 8.084Z" />
+        </svg>
+        <svg class="next" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+          <path d="m15.625 30-1.958-1.958 8.041-8.084-8.041-8.041 1.958-1.959 10.042 10Z" />
+        </svg>
+      </nav>
+    </div>
+    <div class="days-name">
+      <ul>
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Frid</li>
+        <li>Sat</li>
+      </ul>
+    </div>
+    <div class="dates-number">
+      <ul>
+      </ul>
+    </div>
+  </Article>
+
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+:root {
+  --font-family: "Archivo", sans-serif;
+  --font-size: 16px;
+  --completly-width: 100vw;
+  --completly-hight: 100vh;
+  --text-size: clamp(0.61rem, calc(0.49rem + 0.58vw), 1rem);
+}
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+/* Components */
+/* Utilities */
+/* Site styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--completly-width);
+  height: var(--completly-hight);
+  background-image: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+}
+.wrapper {
+  min-width: 576px;
+  padding: 2em;
+  font-size: var(--text-size);
+  border-radius: 20px;
+  box-shadow: 4px 2px 9px 0px rgb(165, 165, 165);
+  background-color: aliceblue;
+}
+.month-year {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 5px;
+}
+.days-name {
+  padding: 1em 1.5em;
+}
+.days-name ul {
+  display: flex;
+  justify-content: space-between;
+}
+.dates-number ul {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(auto, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+.dates-number ul li {
+  padding: 1em;
+}
+.inactive {
+  color: #8b8b8b;
+}
+@media (hover: hover) {
+  .arrows svg:hover {
+    fill: aqua;
+    cursor: pointer;
+  }
+  .dates-number ul li:hover {
+    border-radius: 50%;
+    background-color: pink;
+    cursor: pointer;
+  }
+  .active {
+    background-color: violet;
+    border-radius: 50%;
+    color: white;
+  }
+  ul li.active:hover {
+    background-color: violet;
+  }
+}
