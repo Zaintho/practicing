@@ -72,6 +72,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 d.addEventListener("click", (e) => {
   console.log($refresh.firstChild);
   if (e.target === $refresh) {
+    $npt_text.value = "";
     chargingWord();
   }
   if (e.target === $check) {
