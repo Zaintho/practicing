@@ -1,0 +1,118 @@
+:root {
+  --font-family: "Archivo", sans-serif;
+}
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+/* componenets */
+/* utilities */
+.invalid {
+  border: thin solid red;
+}
+/* style site */
+body {
+  /* position */
+  /* boxmodel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* typography */
+  /* style */
+  background-color: #1488cc;
+  background-image: -webkit-linear-gradient(45deg, #1488cc 0%, #2b32b2 100%);
+  background-image: linear-gradient(45deg, #1488cc 0%, #2b32b2 100%);
+  /* misc */
+}
+.buttons {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+.button {
+  width: calc((100% / 2) - 10px);
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 100;
+  border-radius: 5px;
+  border: thin solid black;
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.buttons .refresh {
+  background-color: rgb(85, 85, 85);
+}
+.buttons .refresh:hover {
+  color: rgb(85, 85, 85);
+  background-color: white;
+}
+.buttons .check {
+  background-color: #1479cc;
+}
+.buttons .check:hover {
+  color: #1479cc;
+  background-color: white;
+}
+.buttons .check:disabled {
+  background-color: rgba(132, 132, 132, 0.624);
+  color: black;
+  cursor: auto;
+}
+
+.clue-word {
+  padding: 1em;
+}
+.clue-word > * {
+  margin: 0em 0em 1em 0em;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+.npt-text {
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.261);
+  border-radius: 7px;
+}
+.npt-text:focus {
+  outline: none;
+  border: 2px solid green;
+  color: #1488cc;
+}
+.npt-text::placeholder {
+  color: #808080d1;
+}
+.title {
+  width: 100%;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.416);
+}
+.title h2 {
+  font-size: 2em;
+  padding: 1em;
+}
+.word {
+  width: 100%;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 15px;
+}
+.wrapper {
+  max-width: 550px;
+  background-color: white;
+  border-radius: 10px;
+}
