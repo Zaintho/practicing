@@ -1,0 +1,108 @@
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+/* Components */
+/* Utilities */
+/* Style Site */
+.content-container {
+  /* boxmodel */
+  display: flex;
+  flex-flow: row wrap;
+  width: 35%;
+  height: 60%;
+  padding: 2em;
+  /* style */
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px 2px black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 25%;
+  padding: 1em;
+  padding-left: 3em;
+}
+.container label {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+.container :where(input, select) {
+  width: 80%;
+  height: 22px;
+  padding-left: 0.5em;
+  color: rgb(101, 101, 101);
+}
+.save {
+  /* position */
+  margin-left: auto;
+  margin-right: auto;
+  /* boxmodel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  /* typograpy */
+  color: white;
+  /* style */
+  border-radius: 8px;
+  background-color: rgb(42, 153, 116);
+  cursor: pointer;
+}
+.save:hover {
+  /* typograpy */
+  color: black;
+  /* style */
+  background-color: rgb(153, 149, 42);
+  /* misc */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.5s ease-in;
+}
+.save:active {
+  color: white;
+  /* style */
+  border-radius: 8px;
+  background-color: rgb(42, 153, 116);
+  cursor: pointer;
+  transition: background-color 0s ease, color 0s ease-in;
+}
+.text-area {
+  /* boxmodel */
+  width: 100%;
+  height: 50%;
+  resize: none;
+  padding: 1em;
+  /* typography */
+  font-family: inherit;
+  font-size: 1.2em;
+  /* style */
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+.wrapper {
+  /*Box-model*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* style */
+  background-image: linear-gradient(220.55deg, #d7003a 0%, #19087e 100%);
+}

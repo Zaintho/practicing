@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App to save text</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <article class="wrapper">
+    <section class="content-container">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Escribe o ingresa tu texto" class="text-area" required
+        title="Ingrese algún contenido para guardar">
+      </textarea>
+      <div class="container">
+        <label for="name">File name:</label>
+        <input type="text" id="name" title="No se permite enviar el cambio vacío" required>
+      </div>
+      <div class="container">
+        <label for="selectionType">Save As:</label>
+        <select name="selectionType" id="selectionType">
+          <option value="- - -">Selecciona una opción</option> option>
+        </select>
+      </div>
+      <div class="save">
+        <p>Save as</p>
+      </div>
+    </section>
+  </article>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
