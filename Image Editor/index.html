@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Easy Image Editor</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+
+<body>
+  <article class="container disable">
+    <h1>Easy Image Editor</h1>
+    <section class="tools-image">
+      <div class="filters">
+        <button class="btn active">Brightness</button>
+        <button class="btn">Saturation</button>
+        <button class="btn">Inversion</button>
+        <button class="btn">Grayscale</button>
+      </div>
+      <div class="current-filter">
+        <div class="description-filter disp-flex">
+          <p class="name">Brightness</p>
+          <p class="porcentage">100%</p>
+        </div>
+        <div class="intensity-filter">
+          <input type="range" name="intensity" id="intensity" min="0" max="200" step="1" value="1" />
+        </div>
+      </div>
+      <div class="extra-tools">
+        <button class="btn" data-right="right">
+          <span class="material-symbols-outlined">refresh</span>
+        </button>
+        <button class="btn" data-left="left"><span class="material-symbols-outlined rotateY">refresh</span></button>
+        <button class="btn" data-vertical="vertical"><span class="material-symbols-outlined">compress</span></button>
+        <button class="btn" data-horizontal="horizontal"><span
+            class="material-symbols-outlined rotateX">compress</span></button>
+      </div>
+    </section>
+    <section class="image">
+      <img src="./assets/ef3-placeholder-image.jpg" alt="Editing Image" />
+    </section>
+    <article class="image-save-options disp-flex ">
+      <button class="reset">Reset</button>
+      <input type="file" class="choose-image" hidden>
+      <div class="save-image disp-flex">
+        <button class="choose">Choose</button>
+        <button class="save">Save</button>
+      </div>
+    </article>
+  </article>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
