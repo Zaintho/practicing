@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resize and compress images</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="disp-flex">
+  <article class="wrapper disp-flex">
+    <section class="upload-image-space disp-flex">
+      <img src="./assets/upload-svgrepo-com.svg" alt="Image-cloud">
+      <input type="file" name="upload-image" id="upload-image" class="hide">
+    </section>
+  </article>
+  <article class="editing-image-wrapper hide">
+    <img src="./assets/7ccbe62d3f12964caa6846146db7c31d.jpeg" alt="image-for-editing">
+    <div class="image-width-height">
+      <label for="width-image">Width</label>
+      <input type="number" name="width-image" id="width-image">
+    </div>
+    <div class="image-width-height">
+      <label for="height-image">Heigth</label>
+      <input type="number" name="heigth-image" id="height-image">
+    </div>
+    <div class="editing-image-options r">
+      <input type="checkbox" name="aspect-ratio" id="aspect-ratio">
+      <label for="aspect-ratio">Lock aspect ratio</label>
+    </div>
+    <div class="editing-image-options">
+      <input type="checkbox" name="reduce-quality" id="reduce-quality">
+      <label for="reduce-quality">Reduce quality</label>
+    </div>
+    <button class="btn-save-image">Download Image</button>
+  </article>
+  <script src="./index.js"></script>
+</body>
+
+</html>

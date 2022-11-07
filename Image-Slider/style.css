@@ -1,0 +1,120 @@
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+image {
+  width: 100%;
+}
+/* Components */
+/* Utilities */
+/* Site Styles  */
+body {
+  display: flex;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width: clamp(400px, 70%, 60%);
+}
+.image-slider {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: both mandatory; */
+}
+.image-slider.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+@keyframes move-slider {
+  16.7% {
+    transform: translate(-300%);
+  }
+  33.4% {
+    transform: translate(-600%);
+  }
+  50% {
+    transform: translate(-900%);
+  }
+  66.7% {
+    transform: translate(-600%);
+  }
+  83.4% {
+    transform: translate(-300%);
+  }
+  100% {
+    transform: translate(-0%);
+  }
+}
+.image-slider img {
+  width: 100%;
+  padding: 1.5px;
+  border-radius: 5px;
+  animation-name: move-slide;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  /* animation-delay: 5s; */
+  transition: transform 1s ease-in-out;
+}
+.btn {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  color: white;
+  background-color: #ffffff4d;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+.image-slider.dragging img {
+  pointer-events: none;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.left {
+  bottom: calc(50% - 1em);
+  transform: translate(-50%);
+}
+.right {
+  bottom: calc(50% - 1em);
+  right: 0;
+  transform: translate(50%);
+}
+.disp-hid {
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (min-width: 650px) {
+  .image-slider img {
+    width: calc((100% / 2) - 3px);
+    margin-right: 3px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .image-slider img {
+    width: calc((100% / 3) - 5px);
+    margin-right: 5px;
+    padding: 0;
+  }
+}

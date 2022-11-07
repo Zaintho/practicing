@@ -1,0 +1,140 @@
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/* Components */
+/* Utilities */
+.disp-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+/* Site Styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(220.55deg, #b7dcff 0%, #ffa4f6 100%);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  width: 600px;
+  min-height: 600px;
+  padding: 1em;
+  border-radius: 25px;
+  background-color: white;
+}
+.upload-image-space {
+  width: calc(500px - 2em);
+  height: calc(500px - 2em);
+  border: 8px dotted black;
+  border-radius: 10px;
+}
+.upload-image-space img {
+  width: 50%;
+}
+.upload-image-space,
+.upload-image-space * {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.upload-image-space:hover,
+.upload-image-space *:hover {
+  opacity: 1;
+}
+
+.editing-image-wrapper {
+  width: 500px;
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 25px;
+  transition: height 1s ease-out;
+}
+.editing-image-wrapper.active {
+  height: 540px;
+  padding: 3em 2em;
+}
+.editing-image-wrapper > img {
+  max-height: 245px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.image-width-height {
+  display: inline-block;
+  width: calc(100% / 2 - 0.5em);
+  margin-bottom: 1em;
+}
+.image-width-height:nth-child(2) {
+  margin-right: 0.7em;
+}
+.image-width-height label {
+  display: block;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+.image-width-height input {
+  width: 100%;
+  height: 2.5em;
+  border: thin solid rgb(173, 173, 173);
+  font-weight: 700;
+  font-size: 1.2em;
+  padding-left: 1em;
+}
+.editing-image-options {
+  display: inline-block;
+  width: calc(100% / 2 - 0.5em);
+  margin-bottom: 1em;
+}
+.editing-image-options input {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.editing-image-options input:checked {
+  accent-color: rgb(194, 116, 233);
+  /* background-color: #b7dcff; */
+}
+.editing-image-options label {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.editing-image-options.r {
+  margin-right: 0.7em;
+}
+.btn-save-image {
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  background-color: #79bbf9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-save-image:hover {
+  background-color: #1b5994;
+}
+.btn-save-image:active {
+  background-color: #79bbf9;
+}
