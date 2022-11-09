@@ -1,0 +1,107 @@
+/* Variables */
+:root {
+  --font-family: "Archivo", sans-serif;
+  --gradient: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
+  --gradient-button: linear-gradient(220.55deg, #ffed46 0%, #ff7ec7 100%);
+}
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+/* Components */
+/* Utilities */
+/* Site Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--gradient);
+}
+.container {
+  width: 600px;
+  background-color: white;
+  padding: 1em 0;
+  border-radius: 10px;
+}
+
+.container h1 {
+  padding: 1em;
+  font-size: 2em;
+  font-weight: 100;
+  border-bottom: thin solid rgb(225, 225, 225);
+}
+
+.container-letters {
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+}
+
+.container-letters input:disabled {
+  width: 1em;
+  font-size: 1.5em;
+  color: green;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: thin solid rgb(198, 198, 198);
+  margin-right: 1em;
+}
+.container-letters input:disabled:last-child {
+  margin-right: 0;
+}
+
+.container p {
+  margin-bottom: 1em;
+  padding: 0 2em;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.container p .title {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.wrong span {
+  transition: color 0.5s ease-in-out;
+}
+.wrong.medium span {
+  color: #c9c900;
+}
+.wrong.lose span {
+  color: #c90a00;
+}
+.container button {
+  width: 60%;
+  padding: 1em;
+  margin-left: calc(40% / 2);
+  margin-right: calc(40% / 2);
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  background-color: #a531dc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.container button:hover {
+  background-color: #3431dc;
+}
+
+.wrong.lose + button {
+  background-color: #c90000;
+}
+.wrong.win + button {
+  background-color: green;
+}
