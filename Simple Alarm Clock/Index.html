@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Alarm Clock</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <article class="container">
+    <img src="./assets/Clock.svg" alt="img_clock" />
+    <p class="day-time">
+      <span class="day-time-hours"></span>
+      <span class="day-time-minutes"></span>
+      <span class="day-time-seconds"></span>
+      <span class="day-time-meridian"></span>
+    </p>
+    <section class="set-alarm-container">
+      <select name="set-alarm-hours" id="set-alarm-hours">
+        <option value="" selected hidden>Hour</option>
+      </select>
+      <select name="set-alarm-minutes" id="set-alarm-minutes">
+        <option value="" selected hidden>Minute</option>
+      </select>
+      <select name="set-alarm-meridian" id="set-alarm-meridian">
+        <option value="" selected hidden>AM/PM</option>
+      </select>
+    </section>
+    <button>Set Alarm</button>
+    <audio src="./assets/Sound_Alamar.wav" hidden></audio>
+
+  </article>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>

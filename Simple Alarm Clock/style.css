@@ -1,0 +1,85 @@
+/* Custom Properties */
+:root {
+  --background: linear-gradient(220.55deg, #8a88fb 0%, #d079ee 100%);
+}
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 150px;
+}
+/* Components */
+/* Utilities */
+/* Site Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--background);
+}
+.container {
+  width: 550px;
+  padding: 2em 1em;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+.day-time {
+  font-size: 3em;
+  font-weight: 300;
+}
+.day-time span {
+  display: inline-block;
+  margin: 0 -0.16em;
+}
+.day-time :last-child {
+  margin: 0;
+}
+.set-alarm-container {
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.set-alarm-container select {
+  width: calc(100% / 3 - (1em / 3));
+  padding: 0.2em 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+button {
+  width: calc(100% - 1em);
+  height: 3em;
+  font-size: 1.5em;
+  background-color: #bf7df1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background-color: #8a88fb;
+}
+button:active {
+  background-color: blueviolet;
+}
+button.disabled {
+  background-color: rgb(226, 226, 226);
+  color: black;
+}
+button.disabled:hover {
+  background-color: red;
+  color: white;
+}
