@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Traslator App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <article class="container-app">
+    <section class="container-text">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Enter Text" contenteditable="true"></textarea>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Translation" class="disabled"
+        contenteditable="true"></textarea>
+    </section>
+    <div class="select-language-container">
+      <div class="listen-copy">
+        <span class="material-symbols-outlined sound">
+          volume_up
+        </span>
+        <span class="material-symbols-outlined copy">
+          content_copy
+        </span>
+      </div>
+      <select name="select-lenguaje-to" id="select-language-to">
+        <option value="" selected hidden>Select Language</option>
+      </select>
+      <span class="material-symbols-outlined swap-languages">
+        swap_horiz
+      </span>
+      <select name="select-lenguaje-to-translate" id="select-language-to-translate">
+        <option value="" selected hidden>Select Language</option>
+      </select>
+      <div class="listen-copy">
+        <span class="material-symbols-outlined sound">
+          volume_up
+        </span>
+        <span class="material-symbols-outlined copy">
+          content_copy
+        </span>
+      </div>
+    </div>
+    <div class="btn">
+      <button>Translate Text</button>
+    </div>
+  </article>
+  <script src="./JS/index.js" type="module"></script>
+</body>
+
+</html>
