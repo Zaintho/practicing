@@ -1,0 +1,248 @@
+/* Variables */
+:root {
+  --font-family: "Archivo", sans-serif;
+  --background: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
+}
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+li {
+  list-style: none;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+/* Components */
+/* Utilities */
+.note-created {
+  display: flex;
+  flex-flow: column wrap;
+  height: 202px;
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 10px;
+}
+.note-created .title {
+  flex-grow: 2;
+  font-size: 1em;
+}
+.note-created .description {
+  flex-grow: 7;
+  max-height: 110px;
+  overflow: auto;
+  border-bottom: thin solid gray;
+}
+.date-menu {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  padding: 0 0.5em 0 0;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.date-menu button {
+  background-color: transparent;
+  font-size: 1.5em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.edit-delete-menu {
+  position: absolute;
+  right: 0;
+  top: -200%;
+  padding: 0.3em;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #00000066;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.edit-delete-menu span {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+.edit-delete-menu ul :first-child {
+  margin-bottom: 0.3em;
+  color: black;
+}
+.edit-delete-menu li:hover,
+.edit-delete-menu li:hover * {
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+.edit-delete-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Style Site */
+body {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--background);
+}
+.wrapper-notes {
+  width: 90%;
+  height: 90%;
+  padding: 1em;
+  min-width: 315px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 285px);
+  gap: 0.5em;
+}
+.btn-create {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 203px;
+  background-color: white;
+  height: 25%;
+  border-radius: 10px;
+}
+.btn-create button {
+  width: 40%;
+  height: 50%;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  color: cornflowerblue;
+  background-color: transparent;
+  outline: none;
+  border: medium dashed cornflowerblue;
+  border-radius: 50%;
+}
+.btn-create button:hover {
+  color: greenyellow;
+  border: medium dashed greenyellow;
+  cursor: pointer;
+}
+.btn-create button:hover a,
+.btn-create button:hover ~ p {
+  color: greenyellow;
+}
+.btn-create button:active {
+  color: green;
+  border: medium dashed green;
+  cursor: pointer;
+}
+.btn-create button:active a,
+.btn-create button:active ~ p {
+  color: green;
+}
+
+.btn-create p {
+  color: cornflowerblue;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.create-note-modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0 0 0 0;
+  background-color: #00000033;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  transition: opacity 0.5s ease;
+}
+.container-modal {
+  width: 400px;
+  padding: 1em;
+  background-color: white;
+}
+.container-modal header {
+  padding: 1em 0em;
+  border-bottom: thin solid #0000004d;
+}
+.container-modal header h2 {
+  width: 90%;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 100;
+}
+.container-modal header span {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.body-window-modal {
+  padding: 1em 0;
+}
+.body-window-modal label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+.tittle-note {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tittle-note input {
+  width: 90%;
+  height: 2em;
+  font-size: 1.15em;
+  outline: none;
+  border: none;
+  border-bottom: thin solid #c6c6c6;
+}
+.description-note {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description-note label {
+  margin-top: 0.5em;
+}
+.description-note textarea {
+  resize: none;
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1.1em;
+  font-family: var(--font-family);
+  outline: none;
+  border: thin solid #cbcbcb;
+}
+.container-modal footer {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-modal footer button {
+  width: 90%;
+  padding: 0.3em 0;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.create-note-modal[id="modal"]:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.example-note-to-create {
+  display: none;
+}

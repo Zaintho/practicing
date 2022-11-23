@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap"
+    rel="stylesheet">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <article class="wrapper-notes">
+    <div class="btn-create">
+      <button><a href="#modal">+</a></button>
+      <p>Add a new note</p>
+    </div>
+    <template class="example-note-to-create">
+      <div class="note-created">
+        <h2 class="title"></h2>
+        <p class="description"></p>
+        <div class="date-menu">
+          <span class="date"></span>
+          <button class="menu">...</button>
+          <div class="edit-delete-menu">
+            <ul>
+              <li class="btn-edit-note"><a href="#modal">
+                  <span class="material-symbols-outlined">
+                    edit
+                  </span>
+                  Editar
+                </a>
+              </li>
+              <li class="delete-btn"><span class="material-symbols-outlined">
+                  delete
+                </span>
+                Eliminar
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </template>
+  </article>
+  <article class="create-note-modal" id="modal">
+    <div class="container-modal">
+      <header>
+        <h2>Add a new Note</h2>
+        <span><a href="#close">X</a></span>
+      </header>
+      <div class="body-window-modal">
+        <div class="tittle-note">
+          <label for="tittle">Title</label>
+          <input type="text" name="tittle" id="tittle" />
+        </div>
+        <div class="description-note">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <footer>
+        <button>Add Note</button>
+      </footer>
+    </div>
+  </article>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
