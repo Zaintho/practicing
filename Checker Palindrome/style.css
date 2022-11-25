@@ -1,0 +1,99 @@
+/* Variables */
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Components */
+/* Utilities */
+/* Style site */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: slateblue;
+}
+.a-wrapper {
+  width: 550px;
+  background-color: #fff;
+  padding: 2em 1em 1em 1em;
+  border-radius: 10px;
+}
+.a-content-container {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  align-items: center;
+}
+.a-wrapper-header {
+  margin-bottom: 1em;
+}
+.a-wrapper-header .title {
+  font-size: 2em;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+.a-wrapper-header .description {
+  line-height: 1.3em;
+  color: gray;
+}
+.a-content-container .input-text {
+  width: 400px;
+  height: 3em;
+  padding: 0 0 0 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  outline: none;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border-bottom: thin solid black;
+}
+.a-wrapper-footer {
+  width: 90%;
+  text-align: center;
+}
+.a-wrapper-footer button {
+  width: 80%;
+  padding: 0.5em 0;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease-in;
+}
+.a-wrapper-footer button:hover {
+  color: #f0f0f0;
+  background-color: black;
+}
+.a-wrapper-footer button:active {
+  color: black;
+  background-color: #f0f0f0;
+}
+.message-palindrome {
+  height: 0;
+  margin-top: 1em;
+  font-size: 1.3em;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.message-palindrome-not {
+  color: tomato;
+}
+.message-palindrome-yes {
+  color: green;
+}
+.message-palindrome.active {
+  height: 66px;
+  margin-top: 2em;
+}
