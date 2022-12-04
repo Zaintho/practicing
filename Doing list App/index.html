@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap"
+    rel="stylesheet">
+  <title>Doing list App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <article class="container-app">
+    <section class="container-header">
+      <div class="input-text-container">
+        <input type="text" class="input-text" placeholder="Add a new task" required />
+        <span class="material-symbols-outlined">
+          format_align_left
+        </span>
+      </div>
+      <div class="list-buttons-container">
+        <ul class="list-buttons">
+          <li class="btn-task active">All</li>
+          <li class="btn-task">Pending</li>
+          <li class="btn-task">Completed</li>
+        </ul>
+        <button class="btn-task btn-clear-task">Clear All</button>
+      </div>
+    </section>
+    <section class="container-task-to-complete">
+      <template>
+        <div class="task-container">
+          <div class="tasks">
+            <input type="checkbox" name="check_task" id="check_task" />
+            <label for="check_task">Hola mundo, estamos programando</label>
+          </div>
+          <span class="btn-menu-content">...</span>
+          <div class="container-menu">
+            <ul class="menu">
+              <li class="menu-btn edit">Edit</li>
+              <li class="menu-btn delete">Delete</li>
+            </ul>
+          </div>
+        </div>
+      </template>
+      </div>
+    </section>
+  </article>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
